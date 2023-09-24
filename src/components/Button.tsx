@@ -1,17 +1,15 @@
+import React from "react";
+
 interface Props {
-  text: string;
-  onClickedBtn: (btnName: string) => void;
+  children: string;
+  color: string;
+  onClick: () => void;
 }
 
-const Button = ({ text, onClickedBtn }: Props) => {
+const Button = ({ children, color, onClick }: Props) => {
   return (
-    <div
-      className="button btn-primary"
-      onClick={() => {
-        onClickedBtn(text);
-      }}
-    >
-      {text}
+    <div className={"btn btn-" + color} onClick={onClick}>
+      {children}
     </div>
   );
 };

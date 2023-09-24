@@ -5,7 +5,9 @@ const handleClickedItem = (item: string) => {
 function App() {
   return (
     <div>
-      <Button text={"Click Me"} onClickedBtn={handleClickedItem}></Button>
+      <Button onClick={() => console.log("Clicked")} color="secondary">
+        My Button
+      </Button>
     </div>
   );
 }
