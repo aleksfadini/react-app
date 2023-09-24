@@ -1,11 +1,11 @@
-import Alert from "./components/Alert";
-
+import Button from "./components/Button";
+const handleClickedItem = (item: string) => {
+  console.log(item);
+};
 function App() {
   return (
     <div>
-      <Alert>
-        Hello <span> hey</span>World
-      </Alert>
+      <Button text={"Click Me"} onClickedBtn={handleClickedItem}></Button>
     </div>
   );
 }
