@@ -1,12 +1,16 @@
 import Button from "./components/Button";
-const handleClickedItem = (item: string) => {
-  console.log(item);
-};
+import Alert from "./components/Alert";
+
 function App() {
   return (
-    <div>
-      <Button onClick={() => console.log("Clicked")}>My Button</Button>
-    </div>
+    <>
+      <div>
+        <Alert> Hey! Close this</Alert>
+      </div>
+      <div>
+        <Button onClick={() => Alert.setShowAlert(true)}>My Button</Button>
+      </div>
+    </>
   );
 }
 
