@@ -13,7 +13,7 @@ function App() {
         </div>
       ) : null} */
     <div>
-      {showAlert && <Alert>Click me</Alert>}
+      {showAlert && <Alert onClose={() => setShowAlert(false)}>Click me</Alert>}
       <Button
         onClick={() => {
           setShowAlert(true);

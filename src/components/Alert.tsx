@@ -1,9 +1,10 @@
 import { ReactNode, useState } from "react";
 interface Props {
   children: ReactNode;
+  onClose: () => void;
 }
 
-function Alert({ children }: Props) {
+function Alert({ children, onClose }: Props) {
   //   const [showAlert, setShowAlert] = useState(false);
   return (
     <>
@@ -12,7 +13,13 @@ function Alert({ children }: Props) {
         role="alert"
       >
         {children}
-        <div className="btn btn-close" data-bs-dismiss="alert"></div>
+        <button
+          type="button"
+          className="btn-close"
+          data-bs-dismiss="alert"
+          aria-label="Close"
+          onClick={onClose}
+        ></button>
       </div>
     </>
   );
